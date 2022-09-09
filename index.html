@@ -9,7 +9,47 @@
   <title>Des2j</title>
 </head>
 <body>
-  
+  <div class="container dice">Player : 
+    <div class="activePlayer"></div>
+  </div>
+  <div class="container bottom newGame" onclick="newGame()">
+      <button type="button" class="butn">
+        NEW GAME
+      </button>
+  </div>
+  <div class="container dice player1">
+    <p class="Player1">Player 1</p>
+    <div class="active p1">.</div>
+    <div class="active counterPlayer1"></div>
+  </div>
+  <div class="container dice player2">
+    <p class="Player2">Player 2</p>
+    <div class="active p2">.</div>
+    <div class="active counterPlayer2"></div>
+  </div>
+  <div class="container des">
+    <img class="img1" src="images/dice6.png">
+  </div>
+  <div class="container bottom current1">
+    CURRENT
+    <div class="container round roundPlayer1"></div>
+  </div>
+  <div class="container bottom current2">
+    CURRENT
+    <div class="container round roundPlayer2"></div>
+  </div>
+  <div class="container roll">
+    <div class="bottom">
+      <button type="button" class="butn" onclick="rollTheDice()">
+        ROLL DICE
+      </button>
+    </div>
+    <div class="bottom">
+      <button type="button" class="butn" onclick="holdPlayer()">
+        HOLD
+      </button>
+    </div>
+  </div>
   <script src="bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
