@@ -1,1 +1,80 @@
 @import url('https://fonts.google.com/specimen/Lato');
+@import url('https://fonts.google.com/specimen/Lato');
+
+body {
+  background-color: #fff;
+  margin: 1px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.dice {
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+.activePlayer {
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+.container {
+  text-align: center;
+}
+p {
+  font-size: 2rem;
+  font-family: "Lato";
+}
+.active {
+  color: red;
+  font-size: 2rem;
+}
+.round {
+  color: #fff;
+  font-size: 2rem;
+}
+img {
+  width: 40%;
+}
+.butn {
+  font-family: "Lato";
+  color: rgb(34, 79, 193);
+  font-size: 30px;
+  padding: 16px 25px 16px 25px;
+  border-color: white;
+  background-color: white;
+}
+.player1 {
+  grid-row-start: 2;
+  grid-column-start: 1;
+}
+.player2 {
+  grid-row-start: 2;
+  grid-column-start: 3;
+}
+.newGame {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  text-align: center;
+}
+.current1 {
+  grid-row-start: 3;
+  grid-column-start: 1;
+  background-color: red;
+  width: 40%;
+}
+.current2 {
+  grid-row-start: 3;
+  grid-column-start: 3;
+  background-color: red;
+  width: 40%;
+}
+.roll {
+  grid-row-start: 3;
+  grid-column-start: 2;
+  text-align: center;
+}
+.des {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  text-align: center;
+}
