@@ -19,3 +19,37 @@ function newGame() {
   document.querySelector(".roundPlayer1").innerHTML = roundPlayer1;
   document.querySelector(".roundPlayer2").innerHTML = roundPlayer2;
 }
+
+// Function to roll the dice
+function rollTheDice() {
+  activePlayer = document.querySelector(".activePlayer").innerHTML;
+  console.log(activePlayer);
+  var randomNumber = 0;
+  setTimeout(function() {
+    randomNumber = Math.floor(Math.random() * 6) + 1;
+    document.querySelector(".img1").setAttribute("src","images/dice" + randomNumber + ".png");
+  if (randomNumber === 1) { 
+    if (activePlayer == 1) {
+      activePlayer = 2;
+      document.querySelector(".activePlayer").innerHTML = 2;
+      document.querySelector(".p2").innerHTML = ".........";
+      document.querySelector(".p1").innerHTML = ".";
+      roundPlayer1 = 0;
+      document.querySelector(".roundPlayer1").innerHTML = 0;
+    } else {
+      activePlayer = 1;
+      document.querySelector(".activePlayer").innerHTML = 1;
+      document.querySelector(".p2").innerHTML = ".";
+      document.querySelector(".p1").innerHTML = ".........";
+      roundPlayer2 = 0;
+      document.querySelector(".roundPlayer2").innerHTML = 0;
+    }
+  } else if (activePlayer == 1) {
+    roundPlayer1 = roundPlayer1 + randomNumber;
+    document.querySelector(".roundPlayer1").innerHTML = roundPlayer1;
+  } else {
+    roundPlayer2 = roundPlayer2 + randomNumber;
+    document.querySelector(".roundPlayer2").innerHTML = roundPlayer2;
+  }
+  }, 120);
+}
