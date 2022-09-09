@@ -53,3 +53,39 @@ function rollTheDice() {
   }
   }, 120);
 }
+
+// Function to Hold
+function holdPlayer() {
+  activePlayer = document.querySelector(".activePlayer").innerHTML;
+  if (activePlayer == 1) {
+    activePlayer = 2;
+    document.querySelector(".activePlayer").innerHTML = 2;
+    counterPlayer1 = counterPlayer1 + roundPlayer1;
+    document.querySelector(".p2").innerHTML = ".........";
+    document.querySelector(".p1").innerHTML = ".";
+    roundPlayer1 = 0;
+    document.querySelector(".roundPlayer1").innerHTML = roundPlayer1;
+    if (counterPlayer1 >= 100) {
+      counterPlayer1 = 100;
+      document.querySelector(".counterPlayer1").innerHTML = counterPlayer1;
+      document.querySelector(".activePlayer").innerHTML = "1 WIN";
+    } else {
+      document.querySelector(".counterPlayer1").innerHTML = counterPlayer1;
+    }
+  } else {
+    activePlayer = 1;
+    document.querySelector(".activePlayer").innerHTML = 1;
+    counterPlayer2 = counterPlayer2 + roundPlayer2;
+    document.querySelector(".p2").innerHTML = ".";
+    document.querySelector(".p1").innerHTML = ".........";
+    roundPlayer2 = 0;
+    document.querySelector(".roundPlayer2").innerHTML = roundPlayer2;
+    if (counterPlayer2 >= 100) {
+      counterPlayer2 = 100;
+      document.querySelector(".counterPlayer2").innerHTML = counterPlayer2;
+      document.querySelector(".activePlayer").innerHTML = "2 WIN";
+    } else {
+      document.querySelector(".counterPlayer2").innerHTML = counterPlayer2;
+    }
+  }
+}
