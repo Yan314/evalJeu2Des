@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="Des2j" content="Jeu de des à deux joueurs">
+  <meta name="description" content="Jeu de des à deux joueurs, Des2j, jeu2des">
   <link rel="stylesheet" href="bootstrap-5.2.0-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
   <title>Des2j</title>
@@ -13,17 +13,20 @@
     <div class="activePlayer"></div>
   </div>
   <div class="container bottom newGame" onclick="newGame()">
-      <button type="button" class="butn">
+      <button type="button" class="butn" id="btn1">
         NEW GAME
       </button>
   </div>
-  <div class="container dice player1">
-    <p class="Player1">Player 1</p>
+  <div class="container dice">
+    <a href="https://devyan314.com/jeu2des/regle.html">Regles</a>
+  </div>
+  <div class="container dice player1">1
+    <p class="Player1 editPlayer1"></p>
     <div class="active p1">.</div>
     <div class="active counterPlayer1"></div>
   </div>
-  <div class="container dice player2">
-    <p class="Player2">Player 2</p>
+  <div class="container dice player2">2
+    <p class="Player2 editPlayer2"></p>
     <div class="active p2">.</div>
     <div class="active counterPlayer2"></div>
   </div>
@@ -49,7 +52,9 @@
         HOLD
       </button>
     </div>
+    <div id="div1">The best dice game</div>
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>

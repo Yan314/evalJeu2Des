@@ -1,97 +1,95 @@
-@import url("https://fonts.google.com/specimen/Lato");
+$white: #fff;
+$red: red;
+
+@mixin width ($width) {
+  width: $width;
+}
+@mixin font ($size) {
+  font-size: $size;
+}
+@mixin align ($align) {
+  text-align: $align;
+}
+
+@import url('https://fonts.google.com/specimen/Lato');
+
 body {
-  background-color: #fff;
+  background-color: $white;
   margin: 1px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
 }
-
 .dice {
-  text-align: center;
+  @include align(center);
   display: inline-block;
   margin: 10px;
 }
-
 .activePlayer {
   grid-row-start: 1;
   grid-column-start: 1;
 }
-
 .container {
-  text-align: center;
+  @include align(center);
 }
-
 p {
-  font-size: 2rem;
+  @include font(2rem);
   font-family: "Lato";
 }
-
 .active {
-  font-size: 2rem;
-  color: red;
+  @include font(2rem);
+  color: $red;
 }
-
 .round {
-  font-size: 2rem;
-  color: #fff;
+  @include font(2rem);
+  color: $white;
 }
-
 img {
-  width: 40%;
+  @include width(40%);
 }
-
 .butn {
-  font-size: 30px;
+  @include font(30px);
   font-family: "Lato";
   color: rgb(34, 79, 193);
   padding: 20px;
-  border-color: #fff;
-  background-color: #fff;
+  border-color: $white;
+  background-color: $white;
 }
-
 .player1 {
   grid-row-start: 2;
   grid-column-start: 1;
 }
-
 .player2 {
   grid-row-start: 2;
   grid-column-start: 3;
 }
-
 .editPlayer {
-  width: 40%;
+  @include width(40%);
 }
-
 .newGame {
-  text-align: center;
+  @include align(center);
   grid-row-start: 1;
   grid-column-start: 2;
 }
-
 .current1 {
-  width: 40%;
+  @include width(40%);
   grid-row-start: 3;
   grid-column-start: 1;
-  background-color: red;
+  background-color: $red;
 }
-
 .current2 {
-  width: 40%;
+  @include width(40%);
   grid-row-start: 3;
   grid-column-start: 3;
-  background-color: red;
+  background-color: $red;
 }
-
 .roll {
-  text-align: center;
+  @include align(center);
   grid-row-start: 3;
   grid-column-start: 2;
 }
-
 .des {
-  text-align: center;
+  @include align(center);
   grid-row-start: 2;
   grid-column-start: 2;
-}/*# sourceMappingURL=style.css.map */
+}

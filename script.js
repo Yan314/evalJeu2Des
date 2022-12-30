@@ -1,5 +1,3 @@
-//adress: https://devyan314.com/jeu2des/index.html
-
 // Active player + counter player
 var activePlayer = 0;
 var counterPlayer1 = 0;
@@ -18,12 +16,25 @@ function newGame() {
   document.querySelector(".counterPlayer2").innerHTML = counterPlayer2;
   document.querySelector(".roundPlayer1").innerHTML = roundPlayer1;
   document.querySelector(".roundPlayer2").innerHTML = roundPlayer2;
+  document.querySelector(".editPlayer1").innerHTML = 
+  '<input type="text" name="username1" class="editPlayer" placeholder="Player 1">';
+  document.querySelector(".editPlayer2").innerHTML = 
+  '<input type="text" name="username2" class="editPlayer" placeholder="Player 2">';
 }
 
 // Function to roll the dice
 function rollTheDice() {
+  var div = $("img"); // Animation jQuery
+    div.animate({rotate: '90deg', opacity: '0.6'}, "hide");
+    div.animate({rotate: '180deg', opacity: '0.6'}, "hide");
+    div.animate({rotate: '270deg', opacity: '0.6'}, "hide");
+    div.animate({rotate: '360deg', opacity: '0.6'}, "hide");
+    div.animate({rotate: '450deg', opacity: '0.6'}, "hide");
+    div.animate({rotate: '540deg', opacity: '0.8'}, "hide");
+    div.animate({rotate: '630deg', opacity: '0.9'}, "slow");
+    div.animate({rotate: '720deg', opacity: '1'}, "slow");
+  
   activePlayer = document.querySelector(".activePlayer").innerHTML;
-  console.log(activePlayer);
   var randomNumber = 0;
   setTimeout(function() {
     randomNumber = Math.floor(Math.random() * 6) + 1;
@@ -51,7 +62,7 @@ function rollTheDice() {
     roundPlayer2 = roundPlayer2 + randomNumber;
     document.querySelector(".roundPlayer2").innerHTML = roundPlayer2;
   }
-  }, 120);
+  }, 2800);
 }
 
 // Function to Hold
@@ -89,3 +100,10 @@ function holdPlayer() {
     }
   }
 }
+
+// color with jQuery
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("#div1").css({"background-color": "yellow"});
+  });
+});
